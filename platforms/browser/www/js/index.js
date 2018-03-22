@@ -59,7 +59,7 @@ var app = {
     refreshDeviceList: function() {
       console.log("BluefruitLE: refreshDeviceList");
         deviceList.innerHTML = ''; // empties the list
-      //  ble.scan([], 5, app.onDiscoverDevice, app.onError);
+        ble.scan([], 5, app.onDiscoverDevice, app.onError);
       console.log("BluefruitLE: DONE refreshDeviceList");
         // if Android can't find your device try scanning for all devices
         // ble.scan([], 5, app.onDiscoverDevice, app.onError);
