@@ -1,18 +1,26 @@
 {
-    "cordova-plugin-ble-central": {
+    "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-ble-central@~1.1.4"
+            "id": "cordova-plugin-whitelist@~1.2.0"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-compat": {
+    "cordova-plugin-console": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-compat"
+            "id": "cordova-plugin-console@~1.0.1"
         },
-        "is_top_level": false,
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@~1.0.1"
+        },
+        "is_top_level": true,
         "variables": {}
     }
 }
