@@ -9,9 +9,9 @@
             * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+      -->
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -74,6 +74,22 @@
                             <p>Page content goes here</p>
                             <!-- Link to another page -->
                             <a href="about.html">About app</a>
+                            <div class="app">
+                                <h1>BluefruitLE</h1>
+                                <div id="mainPage">
+                                    <ul id="deviceList">
+                                    </ul>
+                                    <button id="refreshButton">Refresh</button>
+                                </div>
+                                <div id="detailPage">
+                                    <div id="resultDiv"></div>
+                                    <div>
+                                        <input type="text" id="messageInput" value="Hello"/>
+                                        <button id="sendButton">Send</button>
+                                    </div>
+                                    <button id="disconnectButton">Disconnect</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,6 +108,10 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 </body>
 
 </html>
