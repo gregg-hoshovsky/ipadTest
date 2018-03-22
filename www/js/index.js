@@ -59,7 +59,7 @@ var app = {
     refreshDeviceList: function() {
       console.log("BluefruitLE: refreshDeviceList");
         deviceList.innerHTML = ''; // empties the list
-        ble.scan([], 5, app.onDiscoverDevice, app.onError);
+        ble.scan([], 60, app.onDiscoverDevice, app.onError);
       console.log("BluefruitLE: DONE refreshDeviceList");
         // if Android can't find your device try scanning for all devices
         // ble.scan([], 5, app.onDiscoverDevice, app.onError);
@@ -68,7 +68,7 @@ var app = {
         }, app.onError);
 
         setTimeout(ble.stopScan,
-            50000,
+            60000,
             function() { console.log("BluefruitLE:"+"Scan complete"); },
             function() { console.log("BluefruitLE:"+"stopScan failed"); }
         );
